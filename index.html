@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SUDOKU SOLVER</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/style.css">
+  </head>
+  <body>
+
+    <!-- NAVIGATION PORTION -->
+    <nav id="overridenav" class="navbar fixed-top navbar-expand-md navbar-light"> <!-- navbar-expand-md bg_light-->
+      <div id="navigation_style" class="container">
+        <a class="navbar-brand" href="#">SUDOKU STAR</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="true" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+      <!-- right navigation link -->
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/kevinknight09" target="_blank">ABOUT</a>
+        </li>
+      </ul>
+
+    </div>
+
+
+      </div>
+    </nav>
+
+
+    <!--BANNER PORTION -->
+
+    <div class="jumbotron">
+      <div id="banner" class="container">
+        <h1 class="display-3"> SUDOKU STAR</h1>
+        <p class="lead">A standard Sudoku contains 81 cells, in a 9×9 grid, and has 9 boxes.  Each cell may contain a number from one to nine, and each number can only occur once in each row, column, and box.A Sudoku starts with some cells containing numbers (clues), and the goal is to solve the remaining cells.This website will do the hard job for you just enter the clues and press solve and the algorithm will do its job . Made completely using <span style="color:red;font-weight:600">HTML5, CSS3 , Bootstrap4 and jQuery.</span> Do star the <a href="" target="_blank">repository</a> if you find it useful.New features coming soon</p>
+      </div>
+      </div>
+
+
+      <!-- SOLVE A SUDOKU SECTION -->
+
+<div class="forbgcolor">
+
+      <div id="content" class="container">
+
+      <div class="row">
+
+        <!--LARGE SECTION FOR THE SUDOKU BOARD-->
+        <div class="col-md-7 mb-4">
+
+          <div class="container">
+
+            <table id="gridbox" align='center'>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+              <tr>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+                <td><input class="inputbox" type='text' size="2"/></td>
+              </tr>
+
+            </table>
+
+          </div>
+        </div>
+
+        <!--SMALL SECTION FOR THE BUTTONS -->
+
+        <div class="col-md-5 mb-4">
+
+          <div class="wrapper_class">
+
+              <div class="solvesection">
+
+                <button class="buttonclass" type="button" name="button"> SOLVE</button>
+                <p>Enter any incomplete sudoku and press solve !</p>
+
+              </div>
+
+              <div class="refreshsection">
+
+                <button class="refreshclass"  type="button" name="button">REFRESH THE BOARD</button>
+                <p>Clear the Board and try another one!</p>
+
+              </div>
+
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </div>
+
+      <!--FOOTER SECTION -->
+
+      <div class="footbgcolor">
+
+        <footer class="container">
+          <p class="text-center">DESIGNED AND DEVELOPED BY &copy; ROUNAK SAHA</p>
+        </footer>
+      </div>
+
+
+  </script>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src='myscript.js'>
+
+  </script>
+
+
+
+
+  </body>
+</html>

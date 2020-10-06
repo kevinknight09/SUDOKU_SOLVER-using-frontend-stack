@@ -1,0 +1,219 @@
+body
+{
+  color: white;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar-light .navbar-brand {
+    color: white;
+    font-weight: 500;
+}
+
+.nav-link
+{
+  color: white;
+  font-weight: 500;
+}
+
+.jumbotron
+{
+  padding: 3rem 2rem;
+  margin-bottom: 0rem;
+  background-color: #251e3e;
+  border-radius: 0rem;
+}
+.lead a
+{
+  text-decoration: none;
+  color: red;
+  font-weight: 500;
+}
+
+.lead a:hover
+{
+  color: white;
+}
+
+#overridenav
+{
+  background-color:#851e3e;
+  color: white;
+}
+
+#navigation_style
+{
+  background-color: #851e3e;
+}
+
+#banner
+{
+  background-color: #251e3e;
+}
+.display-3
+{
+  font-family: cursive;
+  font-size: 10vw;
+}
+
+.forbgcolor
+{
+  background-color: #451e3e;
+}
+#content
+{
+  background-color: #451e3e;
+  padding: 3rem 0rem;
+}
+
+.row{
+
+  margin-left: 0;
+  margin-right: 0;
+}
+.gridbox
+{
+  align-items: center;
+  border: 3px solid blue;
+  padding: 0px;
+  margin: 0px;
+  background-color: #77b5fe;
+}
+.gridbox tr
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+.gridbox td
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+.inputbox
+{
+  background-color: #77b5fe;
+  width:  40px;
+  height: 40px;
+  color: black;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+tr:nth-child(1)
+{
+  border-top: 3px solid blue;
+}
+td:nth-child(1)
+{
+  border-left: 3px solid blue;
+}
+tr:nth-child(3n+0)
+{
+  border-bottom: 3px solid blue;
+}
+td:nth-child(3n+0)
+{
+  border-right: 3px solid blue;
+}
+
+.wrapper_class
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.refreshsection
+{
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.refreshsection p
+{
+  text-align: center;
+}
+
+.solvesection
+{
+  height: 30vh;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.solvesection p
+{
+  text-align: center;
+}
+
+.footbgcolor
+{
+  background-color: #4b86b4;
+  height: 6vh;
+}
+
+.buttonclass
+{
+  padding: 0.5rem;
+  font-family: arial;
+  font-weight: bold;
+  background-color: yellow;
+}
+.refreshclass
+{
+  padding: 0.5rem;
+  font-family: arial;
+  font-weight: bold;
+  background-color: #77b5fe;
+}
+footer
+{
+  background-color: inherit;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+@media (max-width:524px) {
+
+  body
+  {
+    width: 100%;
+  }
+
+  .inputbox
+  {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  #overridenav
+  {
+    width: 100%;
+  }
+
+  .jumbotron
+  {
+    width: inherit;
+      padding: 4rem 2rem;
+      margin-bottom: 0rem;
+      background-color: #251e3e;
+      border-radius: 0rem;
+  }
+
+
+}
